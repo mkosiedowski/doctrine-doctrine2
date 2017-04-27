@@ -1852,6 +1852,18 @@ class ClassMetadataInfo implements ClassMetadata
     }
 
     /**
+     * Checks if the given field is an embedded class for this class.
+     *
+     * @param string $fieldName
+     *
+     * @return boolean
+     */
+    public function hasEmbeddedField($fieldName)
+    {
+        return isset($this->embeddedClasses[$fieldName]);
+    }
+
+    /**
      * Gets an array containing all the column names.
      *
      * @param array|null $fieldNames
